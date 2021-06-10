@@ -1,1 +1,88 @@
 Hello here is RPG GAME STUDIO
+
+import flash.events.MouseEvent;
+
+stop();
+
+startButton.addEventListener(MouseEvent.CLICK, startAction);
+
+function startAction(e:MouseEvent):void
+{
+ gotoAndStop(2);
+}
+
+import flash.events.MouseEvent;
+
+stop();
+
+leftButton.addEventListener(MouseEvent.CLICK, leftButtonAction);
+rightButton.addEventListener(MouseEvent.CLICK, rightButtonAction);
+
+function leftButtonAction(e:MouseEvent):void
+{
+ gotoAndStop(3);
+}
+
+function rightButtonAction(e:MouseEvent):void
+{
+ gotoAndStop(4);
+}
+
+import flash.events.MouseEvent;
+
+stop();
+
+rightButton.addEventListener(MouseEvent.CLICK, goFrame2);
+
+function goFrame2(e:MouseEvent):void
+{
+ gotoAndStop(2);
+}
+
+import flash.events.MouseEvent;
+
+stop();
+
+leftButton.addEventListener(MouseEvent.CLICK, goFrame2);
+
+import flash.events.MouseEvent;
+
+stop();
+
+leftButton.addEventListener(MouseEvent.CLICK, goFrame2);
+upButton.addEventListener(MouseEvent.CLICK, goFrame5);
+
+function goFrame5(e:MouseEvent):void
+{
+ gotoAndStop(2);
+}
+
+import flash.events.MouseEvent;
+
+stop();
+
+if(MovieClip(root).getRope)
+ rope.visible = false;
+ 
+rope.addEventListener(MouseEvent.CLICK, getRopeAction);
+
+function getRopeAction(e:MouseEvent):void
+{
+ MovieClip(root).getRope = true;
+ rope.visible = false;
+}
+
+import flash.events.MouseEvent;
+
+stop();
+
+hook.addEventListener(MouseEvent.CLICK, tryEscape);
+rightButton.addEventListener(MouseEvent.CLICK, goFrame5);
+
+function tryEscape(e:MouseEvent):void
+{
+ if(MovieClip(root).getRope)
+ {
+  gotoAndStop(7);
+ }
+}
